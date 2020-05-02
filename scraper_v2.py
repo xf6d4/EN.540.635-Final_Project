@@ -52,6 +52,8 @@ def scraper():
             price = item.find(class_='price-current').get_text()
             toremove = dict.fromkeys((ord(c) for c in u'\xa0\n\t '))
             price = price.translate(toremove)
+            stop = price.index('.') + 3
+            price = price[1:stop]
             # Scrap web link
             link = item.a["href"]
             # Scrap shipping info
@@ -59,3 +61,6 @@ def scraper():
             c = Component(t, brand, detail, price, link, shipping)
             component_list[t + '_list'].append(c)
     return component_list
+
+
+i = scraper()

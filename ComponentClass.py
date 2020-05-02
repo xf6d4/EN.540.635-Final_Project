@@ -10,7 +10,8 @@ class Component(object):
     '''
     this is the class for components in a computer
     '''
-    def __init__(self, type, brand, detail, price, link, shipping):
+    def __init__(self, type='', brand='', detail='', price='', link='',
+                 shipping=''):
         '''
         initiate the component with its informations
 
@@ -29,7 +30,7 @@ class Component(object):
         self.type = type
         self.brand = brand
         self.detail = detail
-        self.price = price
+        self.price = float(price)
         self.link = link
         self.shipping = shipping
 
