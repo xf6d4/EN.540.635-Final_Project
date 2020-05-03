@@ -52,7 +52,7 @@ def build_a_computer(
     It would try 9999 times to build a computer that meets all the requirement
     before rasing error with 'no possible combinations'
     **Parameters**
-        url:*dict,list*
+        url:*dict,str*
             A dictionary. Keys are component names, hashes are corresponded
             product links from www.newegg.com
         name:*str*
@@ -74,7 +74,11 @@ def build_a_computer(
     **Error**
 
     '''
-
+    assert isinstance(url, dict), 'url must be a dict'
+    assert isinstance(name, str), 'name of the computer should be str'
+    assert isinstance(max_price, (folat, int)), 'max_price should be numbers'
+    assert price_mode in ['Try', 'Cheap', 'Expensive'], 'Wrong price_mode'
+    assert isinstance(free_shipping, bool), 'free_shipping should be bool'
     component_list = scraper(url)
     computer = Computer(name)
     component_type = computer.component_type
@@ -111,12 +115,15 @@ if __name__ == '__main__':
         'graphic':
         'https://www.newegg.com/p/pl?Submit=StoreIM&Depa=1&Category=38'
     }
-    scraper_test()
-    computer_class_test()
-    build_a_computer(
-        url,
-        name='BadAssComputer',
-        max_price=3000,
-        price_mode='Expensive',
-        free_shipping=False
-    )
+    # scraper_test()
+    # computer_class_test()
+    # build_a_computer(
+    #     url,
+    #     name='BadAssComputer',
+    #     max_price=3000,
+    #     price_mode='Expensive',
+    #     free_shipping=False
+    # )
+
+a=5
+print(isinstance(a, (float, int)))
