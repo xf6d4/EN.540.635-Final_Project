@@ -1,6 +1,13 @@
 from scraper_v2 import scraper
 from ComputerClass import Computer
 import numpy as np
+import requests
+
+
+def write_computer(computer):
+    f = open(computer.name + '.txt', 'w')
+    f.write(repr(computer))
+    f.close()
 
 
 def scraper_test():
@@ -76,7 +83,7 @@ def build_a_computer(
     '''
     assert isinstance(url, dict), 'url must be a dict'
     assert isinstance(name, str), 'name of the computer should be str'
-    assert isinstance(max_price, (folat, int)), 'max_price should be numbers'
+    assert isinstance(max_price, (float, int)), 'max_price should be numbers'
     assert price_mode in ['Try', 'Cheap', 'Expensive'], 'Wrong price_mode'
     assert isinstance(free_shipping, bool), 'free_shipping should be bool'
     component_list = scraper(url)
@@ -93,7 +100,7 @@ def build_a_computer(
         trytime += 1
         assert trytime <= 9999, \
             'There is no combination that meets all requirement'
-    print(repr(computer))
+    write_computer(computer)
 
 
 if __name__ == '__main__':
@@ -115,15 +122,12 @@ if __name__ == '__main__':
         'graphic':
         'https://www.newegg.com/p/pl?Submit=StoreIM&Depa=1&Category=38'
     }
-    # scraper_test()
-    # computer_class_test()
-    # build_a_computer(
-    #     url,
-    #     name='BadAssComputer',
-    #     max_price=3000,
-    #     price_mode='Expensive',
-    #     free_shipping=False
-    # )
-
-a=5
-print(isinstance(a, (float, int)))
+    scraper_test()
+    computer_class_test()
+    build_a_computer(
+        url,
+        name='BadAssComputer',
+        max_price=3000,
+        price_mode='Expensive',
+        free_shipping=False
+    )

@@ -55,14 +55,25 @@ class Computer(object):
         self.component_type.pop(0)
 
     def __str__(self):
-        msg = "\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s" \
+        msg = "\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s \
+               \n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s \
+               \n\t%s:$%.2f\n\t%s:$%.2f" \
             % (
                 'Name', self.name,
                 'CPU', self.cpu,
                 'Motherboard', self.motherboard,
                 'Memory', self.memory,
                 'Storage', self.storage,
-                'OS', self.os
+                'Graphic', self.graphic,
+                'OS', self.os,
+                'Case', self.case,
+                'Power', self.power_supply,
+                'Cooling', self.cooling,
+                'monitor', self.monitor,
+                'mice', self.mice,
+                'keyboard', self.keyboard,
+                'Price', self.get_price(),
+                'Shipping', self.total_shipping()
                 )
         return msg
 
@@ -70,9 +81,19 @@ class Computer(object):
         return self.name
 
     def __repr__(self):
-        msg = "\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s \
-               \n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s \
-               \n\t%s:$%.2f\n\t%s:$%.2f" \
+        msg_s = ['Name: %s' % self.name]
+        for t in self.component_type:
+            if t == 'NA' or t is None:
+                msg_s.append(t + ':NA')
+            else:
+                msg_s.append(t)
+        p = 'Total Price:$' + str(self.get_price())
+        s = 'Total Shipping:$' + str(self.total_shipping())
+        msg_s.append(p)
+        msg_s.append(s)
+        msg = "%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r \
+               \n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r \
+               \n%s:$%.2f\n%s:$%.2f" \
             % (
                 'Name', self.name,
                 'CPU', self.cpu,
@@ -106,18 +127,23 @@ class Computer(object):
         for t in self.component_type:
             c = self.__dict__[t]
             if type(c) != str:
-                price += c.price
+                try:
+                    float(c.price)
+                except ValueError:
+                    pass
+                else:
+                    price += float(c.price)
         return price
 
     def total_shipping(self):
         shipping = 0
         for t in self.component_type:
             c = self.__dict__[t]
-            if type(c) == str:
-                pass
-            elif c.shipping == 'Free Shipping':
-                pass
-            else:
-                stop = c.shipping.index(' ')
-                shipping += float(c.shipping[1:stop])
+            if type(c) != str:
+                try:
+                    float(c.shipping)
+                except ValueError:
+                    pass
+                else:
+                    shipping += float(c.shipping)
         return shipping

@@ -30,7 +30,7 @@ class Component(object):
         self.type = type
         self.brand = brand
         self.detail = detail
-        self.price = float(price)
+        self.price = price
         self.link = link
         self.shipping = shipping
 
@@ -41,9 +41,9 @@ class Component(object):
         return self.type
 
     def __repr__(self):
-        msg = "\n%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s" \
+        msg = "\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s" \
             % (
-                self.type, self.brand,
+                'Brand', self.brand,
                 'Detail', self.detail,
                 'Price', self.price,
                 'Link', self.link,
