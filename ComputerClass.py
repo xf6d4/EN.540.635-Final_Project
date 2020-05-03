@@ -11,9 +11,11 @@ class Computer(object):
     '''
     This is a class to build computers
     '''
-    def __init__(self, name='MyComputer', cpu='', motherboard='', case='',
-                 power_supply='', memory='', storage='', cooling='',
-                 graphic='', os='', monitor='', mice='', keyboard=''):
+    def __init__(
+        self, name='MyComputer', cpu=None, motherboard=None, case=None,
+        power_supply=None, memory=None, storage=None, cooling=None,
+        graphic=None, os=None, monitor=None, mice=None, keyboard=None
+    ):
         '''
         initiate the computer with its component
 
@@ -95,10 +97,14 @@ class Computer(object):
             return False
         return True
 
+    def ifcomplete(self):
+        check = any([self.__dict__[c] for c in self.component_type])
+        return check
+
     def get_price(self):
         price = 0
         for t in self.component_type:
-            c = getattr(self, t)
+            c = self.__dict__[t]
             if type(c) != str:
                 price += c.price
         return price
@@ -106,7 +112,7 @@ class Computer(object):
     def total_shipping(self):
         shipping = 0
         for t in self.component_type:
-            c = getattr(self, t)
+            c = self.__dict__[t]
             if type(c) == str:
                 pass
             elif c.shipping == 'Free Shipping':

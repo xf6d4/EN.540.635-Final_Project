@@ -17,13 +17,11 @@ def scraper(url):
 
     for t in component_type:
         i = url[t]
-        print('Scraping for %s is success' % t)
         response = requests.get(i)
         # Get webpage text
         webpage = BeautifulSoup(response.text, 'html.parser')
         # Find out each item listed in the webpage
         items = webpage.findAll("div", {"class": 'item-container'})
-
         for item in items:
             # Scrap brand
             brand = item.find(class_='item-branding').a.img["title"]
@@ -41,4 +39,8 @@ def scraper(url):
             shipping = item.find(class_='price-ship').get_text().strip()
             c = Component(t, brand, detail, price, link, shipping)
             component_list[t + '_list'].append(c)
+        if component_list[t + '_list'] == []:
+            print(component_list)
+            raise AssertionError('Something is wrong with the link for %s' % t)
+        print('Scraping for %s is success' % t)
     return component_list

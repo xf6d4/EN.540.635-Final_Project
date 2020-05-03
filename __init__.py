@@ -21,26 +21,44 @@ def build_a_computer(
                      url,
                      name='MyComputer',
                      max_price=2000,
-                     price_mode='try',
-                     shipping=False
+                     price_mode='Try',
+                     free_shipping=False
                     ):
-    def if_meet_requirement():
-        pass
+    def meet_requirement(computer, max_price, price_mode, free_shipping):
+        if not computer.ifcomplete():
+            return False
+
+        compatible = computer.ifcompatible()
+        within_price = bool(computer.get_price() <= max_price)
+        low, high = 0.7, 0.7
+        if price_mode == 'Cheap':
+            low == 0
+        elif price_mode == 'Expensive':
+            high == 1
+        price_range = [low, high]
+        meet_range = bool(computer.get_price() in price_range)
+        free = bool(computer.total_shipping() == 0)
+        if compatible and within_price and meet_range:
+            if free_shipping:
+                if not free:
+                    return False
+            return True
+        else:
+            return False
+
     component_list = scraper(url)
-    for i in component_list:
-        if component_list[i] == []:
-            raise AssertionError('Something is wrong with the link for %s' % i)
     computer = Computer(name)
     component_type = computer.component_type
-    compatible = False
-    while not compatible:
+    trytime = 0
+    while not meet_requirement(computer, max_price, price_mode, free_shipping):
         for t in component_type:
             t_list = t + '_list'
-            if t_list in component_list and component_list[t_list] != []:
+            if t_list in component_list:
                 setattr(computer, t, np.random.choice(component_list[t_list]))
             else:
                 setattr(computer, t, 'NA')
-        compatible = computer.ifcompatible()
+        trytime += 1
+        assert trytime <= 3000, 'There is no combination that meets all requirement'
     print(repr(computer))
 
 
@@ -69,6 +87,6 @@ if __name__ == '__main__':
         url,
         name='BadAssComputer',
         max_price=2000,
-        price_mode='try',
-        shipping=False
+        price_mode='Cheap',
+        free_shipping=False
     )
