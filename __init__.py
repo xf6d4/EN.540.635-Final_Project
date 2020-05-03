@@ -81,7 +81,7 @@ if __name__ == '__main__':
         'graphic':
         'https://www.newegg.com/p/pl?Submit=StoreIM&Depa=1&Category=38'
     }
-    component_list = scraper_test()
+    scraper_test()
     computer_class_test()
     build_a_computer(
         url,
