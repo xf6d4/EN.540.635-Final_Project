@@ -12,6 +12,17 @@ from ComponentClass import Component
 
 
 def scraper(url):
+    '''
+    this function will scrap computer parts information online
+
+    **Parameters**
+        url: *list*
+            list of URLs for different computer parts
+
+    **Return**
+        component_list: *list*
+            list of different computer parts information will be needed
+    '''
     component_type = [*url]
     component_list = {t + '_list': [] for t in component_type}
 

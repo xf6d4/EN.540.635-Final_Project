@@ -16,16 +16,16 @@ class Component(object):
         initiate the component with its informations
 
         **Parameters**
-            brand:
-
-            detail:
-
-            price:
-
-            link:
-
-            shipping:
-
+            brand: *list*
+                brand names for every component
+            detail: *list*
+                detail information for every component
+            price: *list*
+                price for every component 
+            link: *list*
+                url links for every component
+            shipping: *list*
+                shipping information for every component
         '''
         self.type = type
         self.brand = brand
