@@ -29,15 +29,17 @@ def build_a_computer(
             return False
 
         compatible = computer.ifcompatible()
-        within_price = bool(computer.get_price() <= max_price)
+        within_price = computer.get_price() <= max_price
         low, high = 0, round(max_price)
-        if price_mode == 'Cheap':
-            high = round(0.5 * max_price)
-        elif price_mode == 'Expensive':
-            low = round(0.5 * max_price)
+        if price_mode is 'Cheap':
+            high = round(max_price / 2)
+        elif price_mode is 'Expensive':
+            print('Expensive')
+            low = round(max_price / 2)
+            print(low, high)
         meet_range = bool(computer.get_price() in range(low, high))
-        free = bool(computer.total_shipping() == 0)
-        if compatible and within_price and meet_range:
+        free = computer.total_shipping() == 0
+        if compatible and within_price:
             if free_shipping:
                 if not free:
                     return False
@@ -86,7 +88,7 @@ if __name__ == '__main__':
     build_a_computer(
         url,
         name='BadAssComputer',
-        max_price=2000,
-        price_mode='Cheap',
+        max_price=3000,
+        price_mode='Expensive',
         free_shipping=False
     )

@@ -12,7 +12,7 @@ from ComponentClass import Component
 
 
 def scraper(url):
-    component_type = list(url.keys())
+    component_type = [*url]
     component_list = {t + '_list': [] for t in component_type}
 
     for t in component_type:
@@ -20,10 +20,8 @@ def scraper(url):
         response = requests.get(i)
         # Get webpage text
         webpage = BeautifulSoup(response.text, 'html.parser')
-        # print('web', webpage)
         # Find out each item listed in the webpage
         items = webpage.findAll('div', {'class': 'item-container'})
-        # print('items', items)
         for item in items:
             # Scrap brand
             brand = item.find(class_='item-branding').a.img["title"]
@@ -42,6 +40,6 @@ def scraper(url):
             c = Component(t, brand, detail, price, link, shipping)
             component_list[t + '_list'].append(c)
         if component_list[t + '_list'] == []:
-            raise AssertionError('Something is wrong with the link for %s' % t)
+            raise AssertionError('No items are found with the link for %s' % t)
         print('Scraping for %s is success' % t)
     return component_list
