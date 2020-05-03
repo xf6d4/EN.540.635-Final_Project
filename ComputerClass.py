@@ -49,6 +49,8 @@ class Computer(object):
         self.monitor = monitor
         self.mice = mice
         self.keyboard = keyboard
+        self.component_type = list(self.__dict__.keys())
+        self.component_type.pop(0)
 
     def __str__(self):
         msg = "\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s" \
@@ -66,9 +68,9 @@ class Computer(object):
         return self.name
 
     def __repr__(self):
-        self.price = self.get_price()
         msg = "\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s \
-               \n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s" \
+               \n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s \
+               \n\t%s:$%.2f\n\t%s:$%.2f" \
             % (
                 'Name', self.name,
                 'CPU', self.cpu,
@@ -83,18 +85,33 @@ class Computer(object):
                 'monitor', self.monitor,
                 'mice', self.mice,
                 'keyboard', self.keyboard,
-                'Price', self.price
+                'Price', self.get_price(),
+                'Shipping', self.total_shipping()
                 )
         return msg
 
     def ifcompatible(self):
-        pass
+        if self.cpu.brand not in self.motherboard.detail:
+            return False
+        return True
 
     def get_price(self):
         price = 0
-        component_type = list(self.__dict__.keys())
-        for t in component_type:
+        for t in self.component_type:
             c = getattr(self, t)
             if type(c) != str:
                 price += c.price
         return price
+
+    def total_shipping(self):
+        shipping = 0
+        for t in self.component_type:
+            c = getattr(self, t)
+            if type(c) == str:
+                pass
+            elif c.shipping == 'Free Shipping':
+                pass
+            else:
+                stop = c.shipping.index(' ')
+                shipping += float(c.shipping[1:stop])
+        return shipping
