@@ -17,6 +17,29 @@ def computer_class_test():
     print('Computer Builder is up and running')
 
 
+def meet_requirement(computer, max_price, price_mode, free_shipping):
+    if not computer.ifcomplete():
+        return False
+
+    compatible = computer.ifcompatible()
+    within_price = computer.get_price() <= max_price
+    choice = np.random.random() <= 0.9
+    low, high = 0, max_price
+    if price_mode is 'Cheap' and choice:
+        high = max_price / 2
+    elif price_mode is 'Expensive' and choice:
+        low = max_price / 2
+    meet_range = low <= computer.get_price() <= high
+    free = computer.total_shipping() == 0
+    if compatible and within_price and meet_range:
+        if free_shipping:
+            if not free:
+                return False
+        return True
+    else:
+        return False
+
+
 def build_a_computer(
                      url,
                      name='MyComputer',
@@ -24,28 +47,33 @@ def build_a_computer(
                      price_mode='Try',
                      free_shipping=False
                     ):
-    def meet_requirement(computer, max_price, price_mode, free_shipping):
-        if not computer.ifcomplete():
-            return False
+    '''
+    This is a function to combine components into computer
+    It would try 9999 times to build a computer that meets all the requirement
+    before rasing error with 'no possible combinations'
+    **Parameters**
+        url:*dict,list*
+            A dictionary. Keys are component names, hashes are corresponded
+            product links from www.newegg.com
+        name:*str*
+            A str of the name you want to give to the computer
+        max_price:*int/float*
+            The maximum price you are willing to pay for the computer
+        price_mode:*'Try', 'Expensive', 'Cheap'
+            The price mode of the computer.
+            'Try' represents that you don't have a preference
+            'Cheap' means 90% of cases the max price of the computer would be
+                less than half of the max_price
+            'Expensive' means 90% of cases the min price of the computer would
+                be more than half of the max_price
+        free_shipping:*bool*
+            True means you want free shipping for all components
+    **Output**
+        YourComputer:*.txt*
+            A text file with all the informations of components in you computer
+    **Error**
 
-        compatible = computer.ifcompatible()
-        within_price = computer.get_price() <= max_price
-        low, high = 0, round(max_price)
-        if price_mode is 'Cheap':
-            high = round(max_price / 2)
-        elif price_mode is 'Expensive':
-            print('Expensive')
-            low = round(max_price / 2)
-            print(low, high)
-        meet_range = bool(computer.get_price() in range(low, high))
-        free = computer.total_shipping() == 0
-        if compatible and within_price:
-            if free_shipping:
-                if not free:
-                    return False
-            return True
-        else:
-            return False
+    '''
 
     component_list = scraper(url)
     computer = Computer(name)

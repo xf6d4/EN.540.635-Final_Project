@@ -7,12 +7,11 @@ Created on Thu Apr 30 14:47:49 2020
 
 import requests
 from bs4 import BeautifulSoup
-from csv import writer
 from ComponentClass import Component
 
 
 def scraper(url):
-    component_type = [*url]
+    component_type = list(url.keys())
     component_list = {t + '_list': [] for t in component_type}
 
     for t in component_type:
