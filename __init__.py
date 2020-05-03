@@ -30,13 +30,12 @@ def build_a_computer(
 
         compatible = computer.ifcompatible()
         within_price = bool(computer.get_price() <= max_price)
-        low, high = 0.7, 0.7
+        low, high = 0, round(max_price)
         if price_mode == 'Cheap':
-            low == 0
+            high = round(0.5 * max_price)
         elif price_mode == 'Expensive':
-            high == 1
-        price_range = [low, high]
-        meet_range = bool(computer.get_price() in price_range)
+            low = round(0.5 * max_price)
+        meet_range = bool(computer.get_price() in range(low, high))
         free = bool(computer.total_shipping() == 0)
         if compatible and within_price and meet_range:
             if free_shipping:
@@ -58,7 +57,8 @@ def build_a_computer(
             else:
                 setattr(computer, t, 'NA')
         trytime += 1
-        assert trytime <= 3000, 'There is no combination that meets all requirement'
+        assert trytime <= 9999, \
+            'There is no combination that meets all requirement'
     print(repr(computer))
 
 
