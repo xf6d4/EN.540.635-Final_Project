@@ -1,3 +1,6 @@
+'''
+
+'''
 from scraper_v2 import scraper
 from ComputerClass import Computer
 import numpy as np
