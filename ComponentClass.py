@@ -28,6 +28,18 @@ class Component(object):
         initiate the component with its informations
 
         **Parameters**
+<<<<<<< HEAD
+            brand: *list*
+                brand names for every component
+            detail: *list*
+                detail information for every component
+            price: *list*
+                price for every component 
+            link: *list*
+                url links for every component
+            shipping: *list*
+                shipping information for every component
+=======
             brand:*str*
                 The brand of the component
             detail:*str*
@@ -44,6 +56,7 @@ class Component(object):
 
         **Error**
             None
+>>>>>>> 0606b88fe1a36e32936666aaca42b02e6b122684
         '''
         if type is None:
             raise ValueError('type of the component can\'t be None')
