@@ -148,13 +148,29 @@ def build_a_computer(
         YourComputer:*.txt*
             A text file with all the informations of components in you computer
     **Error**
-
+        InputError:*str*
+            error if url is not dict
+        NameError:*str*
+            error if name is not str
+        PriceError:*str*
+            error if max_price is not int or float
+        PriceModeError:*str*
+            error if price_mode doesn't match any of the pre set type
+        ShippingError:*str*
+            error if free_shipping is not a bool value
+        TryError:*str*
+            error if 9999 times are tried and
+            the computer that meet all requirements is not found
     '''
-    assert isinstance(url, dict), 'url must be a dict'
-    assert isinstance(name, str), 'name of the computer should be str'
-    assert isinstance(max_price, (float, int)), 'max_price should be numbers'
-    assert price_mode in ['Try', 'Cheap', 'Expensive'], 'Wrong price_mode'
-    assert isinstance(free_shipping, bool), 'free_shipping should be bool'
+    assert isinstance(url, dict), 'InputError: url must be a dict'
+    assert isinstance(name, str), \
+        'NameError: name of the computer should be str'
+    assert isinstance(max_price, (float, int)), \
+        'PriceError: max_price should be numbers'
+    assert price_mode in ['Try', 'Cheap', 'Expensive'], \
+        'PriceModeError: Wrong price_mode'
+    assert isinstance(free_shipping, bool), \
+        'ShiipingError: free_shipping should be bool'
     component_list = scraper(url)
     computer = Computer(name)
     component_type = computer.component_type
@@ -168,7 +184,7 @@ def build_a_computer(
                 setattr(computer, t, 'NA')
         trytime += 1
         assert trytime <= 9999, \
-            'There is no combination that meets all requirement'
+            'TryError: There is no combination that meets all requirement'
     write_computer(computer)
 
 
