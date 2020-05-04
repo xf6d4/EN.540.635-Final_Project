@@ -1,0 +1,55 @@
+Name:'BadAssComputer'
+CPU:
+	Brand:AMD
+	Detail:AMD Ryzen 9 3950X 16-Core 3.5 GHz Socket AM4 105W 100-100000051WOF Desktop Processor
+	Price:739.99
+	Link:https://www.newegg.com/amd-ryzen-9-3950x/p/N82E16819113616?Item=N82E16819113616
+	Shipping:0
+Motherboard:
+	Brand:MSI
+	Detail:MSI B450 TOMAHAWK MAX AM4 AMD B450 SATA 6Gb/s ATX AMD Motherboard
+	Price:114.99
+	Link:https://www.newegg.com/msi-b450-tomahawk-max/p/N82E16813144267?Item=N82E16813144267
+	Shipping:$3.99 Shipping
+Memory:
+	Brand:G.SKILL
+	Detail:G.SKILL Trident Z Neo (For AMD Ryzen) Series 32GB (2 x 16GB) 288-Pin RGB DDR4 SDRAM DDR4 3600 (PC4 28800) Desktop Memory Model F4-3600C16D-32GTZNC
+	Price:184.99
+	Link:https://www.newegg.com/g-skill-32gb-288-pin-ddr4-sdram/p/N82E16820232861?Item=N82E16820232861
+	Shipping:0
+Storage:
+	Brand:Western Digital
+	Detail:WD Red 4TB NAS Hard Disk Drive - 5400 RPM Class SATA 6Gb/s 64MB Cache 3.5 Inch - WD40EFRX
+	Price:118.99
+	Link:https://www.newegg.com/red-wd40efrx-4tb/p/N82E16822236599?Item=N82E16822236599
+	Shipping:0
+Graphic:
+	Brand:ASRock
+	Detail:ASRock Radeon RX 5700 XT DirectX 12 RX 5700 XT TAICHI X 8G OC+ 8GB 256-Bit GDDR6 PCI Express 4.0 HDCP Ready Video Card
+	Price:439.99
+	Link:https://www.newegg.com/asrock-radeon-rx-5700-xt-rx-5700-xt-taichi-x-8g-oc/p/N82E16814930022?Item=N82E16814930022
+	Shipping:0
+OS:'NA'                
+Case:
+	Brand:Cooler Master
+	Detail:Cooler Master MasterCase H500 ARGB Airflow ATX Mid-Tower with Mesh & Transparent Front Panel Option, 2 x 200mm ARGB Fans, and a Tempered Glass Side Panel
+	Price:119.99
+	Link:https://www.newegg.com/gunmetal-cooler-master-mastercase-h500-atx-mid-tower/p/N82E16811119350?Item=N82E16811119350
+	Shipping:$11.99 Shipping
+Power:
+	Brand:EVGA
+	Detail:EVGA SuperNOVA 750 G5, 80 Plus Gold 750W, Fully Modular, Eco Mode with FDB Fan, 10 Year Warranty, Includes Power ON Self Tester, Compact 150mm Size, Power Supply 220-G5-0750-X1
+	Price:139.99
+	Link:https://www.newegg.com/evga-supernova-750-g5-220-g5-0750-x1-750w/p/N82E16817438162?Item=N82E16817438162
+	Shipping:$9.99 Shipping
+Cooling:
+	Brand:Fractal Design
+	Detail:Fractal Design Celsius S24 240mm Silent High Performance Slim Expandable All-In-One CPU Liquid / Water Cooler
+	Price:128.99
+	Link:https://www.newegg.com/p/N82E16835352029?Item=N82E16835352029
+	Shipping:0
+monitor:'NA'
+mice:'NA'
+keyboard:'NA'                
+Price:$1987.92
+Shipping:$0.00
