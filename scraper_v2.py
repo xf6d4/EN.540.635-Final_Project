@@ -36,7 +36,7 @@ def scraper(url):
         LinkError:*str*
             Error if links are not from www.newegg.com
         AttributeError:*str*
-            
+            Error if no products are found in the web link
     '''
     component_type = list(url.keys())
     component_list = {t + '_list': [] for t in component_type}

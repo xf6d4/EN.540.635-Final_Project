@@ -8,12 +8,39 @@ import requests
 
 
 def write_computer(computer):
+    '''
+    this function write the infomation of computer into a text file
+
+    **Parameter**
+        computer:*object*
+            an object that has been initiate by ComputerClass
+
+    **Output**
+        None
+
+    **Error**
+        AssertionError:*str*
+            error if input is not callable
+    '''
+    assert callable(computer), 'The computer is not callable'
     f = open(computer.name + '.txt', 'w')
     f.write(repr(computer))
     f.close()
 
 
 def scraper_test():
+    '''
+    this is a function that test the scraper with buildin link
+
+    **Parameter**
+        None
+
+    **Output**
+        None
+
+    **Error**
+        None
+    '''
     url = {
            'test':
            'https://www.newegg.com/CPUs-Processors/Category/ID-34?Tid=6676'
@@ -23,16 +50,54 @@ def scraper_test():
 
 
 def computer_class_test():
+    '''
+    This is a function that test to initiate the computerclass
+
+    **Parameter**
+        None
+
+    **Output**
+        None
+
+    **Error**
+        None
+    '''
     computer_test = Computer('test')
     print('Computer Builder is up and running')
 
 
 def meet_requirement(computer, max_price, price_mode, free_shipping):
+    '''
+    This is a function checks if all the requirement are meet for the computer
+
+    **Parameter**
+        computer:*object*
+            an object that is initiate by computer class
+        max_price:*int/float*
+            the max price that you are willing to pay
+        price_mode:*str*
+            the price mode of the computer built
+        free_shipping:*bool*
+            if you want free shipping
+
+    **Output**
+        True/False:*bool*
+            return True if all requirements are met
+
+    **Error**
+        AttributeError:
+            Error if object is not initiated by ComputerClass
+    '''
+    try:
+        computer.ifcomplete()
+    except AttributeError:
+        raise AttributeError('Please put in object initiated by ComputerClass')
     if not computer.ifcomplete():
         return False
 
     compatible = computer.ifcompatible()
     within_price = computer.total_price() <= max_price
+
     choice = np.random.random() <= 0.9
     low, high = 0, max_price
     if price_mode is 'Cheap' and choice:
@@ -40,6 +105,7 @@ def meet_requirement(computer, max_price, price_mode, free_shipping):
     elif price_mode is 'Expensive' and choice:
         low = max_price / 2
     meet_range = low <= computer.total_price() <= high
+
     free = computer.total_shipping() == 0
     if compatible and within_price and meet_range:
         if free_shipping:
