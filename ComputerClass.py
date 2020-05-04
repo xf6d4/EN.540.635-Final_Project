@@ -1,7 +1,6 @@
 '''
 Created on May, 2
 Classes that build a computer from components provided by ComponentClass
-and check if components are applicable
 
 @author LT_LUTUO
 @coauthor: xf6d4
@@ -11,7 +10,24 @@ and check if components are applicable
 class Computer(object):
     '''
     This is a class to build computers
-    there are subfunctions to check its compatibility and calculate its price
+
+    **Functions**
+        __init__(self):
+            initiate the computer
+        __str__(self):
+            return overview info of the detail for every component
+        __call__(self):
+            return the name of the computer
+        __repr__(self):
+            return all info included in every component in the computer
+        ifcompatible(self):
+            check if the cpu and motherboard is compatible
+        ifcomplete(self):
+            check if all components have values
+        total_price(self):
+            calculate total price of the computer
+        total_shipping(self):
+            calcilate total shipping cost of the computer
     '''
     def __init__(
                 self, name='MyComputer', cpu=None, motherboard=None, case=None,
@@ -101,7 +117,7 @@ class Computer(object):
                 'monitor', self.monitor,
                 'mice', self.mice,
                 'keyboard', self.keyboard,
-                'Price', self.get_price(),
+                'Price', self.total_price(),
                 'Shipping', self.total_shipping()
                 )
         return msg
@@ -129,7 +145,7 @@ class Computer(object):
             None
         '''
         msg = "%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:%r \
-               \n%s:%r\n%s:%r\n%s:%r\n%s:%r\n%s:$%.2f\n%s:$%.2f" \
+               \n%s:%r\n%s:%r\n%s:%r\n%s:%r\n\n%s:$%.2f\n%s:$%.2f" \
             % (
                 'Name', self.name,
                 'CPU', self.cpu,
@@ -144,8 +160,8 @@ class Computer(object):
                 'monitor', self.monitor,
                 'mice', self.mice,
                 'keyboard', self.keyboard,
-                'Price', self.get_price(),
-                'Shipping', self.total_shipping()
+                'Total Price', self.total_price(),
+                'Total Shipping', self.total_shipping()
                 )
         return msg
 
@@ -160,9 +176,12 @@ class Computer(object):
             CallableError:
                 return error if cpu.brand or motherboard.detail is not callable
         '''
-        assert callable(self.cpu.brand) and callable(self.motherboard.detail),\
-            'CPU or Motherboard should not be empty' \
-            'if compatible check is needed'
+        try:
+            b = self.cpu.brand
+            d = self.motherboard.detail
+        except AttributeError:
+            raise AttributeError('CPU or Motherboard should not be empty '
+                                 'if compatible check is needed')
         if self.cpu.brand not in self.motherboard.detail:
             return False
         return True
@@ -179,8 +198,18 @@ class Computer(object):
         check = any([self.__dict__[c] for c in self.component_type])
         return check
 
-    def get_price(self):
-        price = 0
+    def total_price(self):
+        '''
+        calculate total price for the computer with
+        current components that have price value
+        **Output**
+            total_price:
+                total price with the component given in the computer
+        **Error**
+            ValueError:
+                error if total price is 0
+        '''
+        total_price = 0
         for t in self.component_type:
             c = self.__dict__[t]
             if type(c) != str:
@@ -189,11 +218,22 @@ class Computer(object):
                 except ValueError:
                     pass
                 else:
-                    price += float(c.price)
-        return price
+                    total_price += float(c.price)
+        if total_price == 0:
+            raise ValueError('Current price for the computer is 0')
+        return total_price
 
     def total_shipping(self):
-        shipping = 0
+        '''
+        calculate total shipping cost for the computer with
+        current components that have shipping cost value
+        **Output**
+            total_shipping:
+                total shipping cost with the component given in the computer
+        **Error**
+            None
+        '''
+        total_shipping = 0
         for t in self.component_type:
             c = self.__dict__[t]
             if type(c) != str:
@@ -202,5 +242,5 @@ class Computer(object):
                 except ValueError:
                     pass
                 else:
-                    shipping += float(c.shipping)
-        return shipping
+                    total_shipping += float(c.shipping)
+        return total_shipping

@@ -12,25 +12,49 @@ from ComponentClass import Component
 
 
 def scraper(url):
+    '''
+    This function scrap product info from www.newegg.com
+    and initiate theminto components of the computer
+    with a give dict of urls
+    **Parameter**
+        url:*dict,str*
+            A dict that contain info for component names and its url.
+            Keys should be component names that are in README or ComputerClass
+            Hashes should be its product url from www.newegg.com
+
+    **Output**
+        component_list:*dict,str:object*
+            A dict that contain info for lists of components
+            Keys are name of the components with _list
+            Hashes are objects after initiating with component class
+
+    **Error**
+        KeyError:*str*
+            Error if keys' name in url do match possible ones in ComputerClass
+        AssertionError:*str*
+            Error if links in hashes are not str
+        LinkError:*str*
+            Error if links are not from www.newegg.com
+        AttributeError:*str*
+            
+        
+    '''
     component_type = list(url.keys())
     component_list = {t + '_list': [] for t in component_type}
     pos_component = [
         'cpu', 'motherboard', 'case', 'power_supply', 'memory', 'storage',
         'cooling', 'graphic', 'os', 'monitor', 'mice', 'keyboard', 'test'
     ]
-    # for t in component_type:
-    #     if t not in pos_component:
-    #         raise AssertionError('Please refer to readme for possible \
-    #              component names and change your name in keys for url')
+
     assert all(t in pos_component for t in component_type), \
-        'Please refer to readme for possible component names '\
+        'KeyError: Please refer to readme for possible component names '\
         'and change the name in keys for url'
 
     for t in component_type:
         i = url[t]
         assert isinstance(i, str), 'please input links for %s as str' % t
         assert 'www.newegg.com' in i, \
-            'This scraper only works for links for www.newegg.com'
+            'LinkError: This scraper only works for links for www.newegg.com'
         response = requests.get(i)
         # Get webpage text
         webpage = BeautifulSoup(response.text, 'html.parser')
@@ -69,6 +93,6 @@ def scraper(url):
             c = Component(t, brand, detail, price, link, shipping)
             component_list[t + '_list'].append(c)
         if component_list[t + '_list'] == []:
-            raise AssertionError('No items are found with the link for %s' % t)
+            raise AttributeError('No items are found with the link for %s' % t)
         print('Scraping for %s is success' % t)
     return component_list

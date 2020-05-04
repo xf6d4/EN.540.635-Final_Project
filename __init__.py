@@ -32,14 +32,14 @@ def meet_requirement(computer, max_price, price_mode, free_shipping):
         return False
 
     compatible = computer.ifcompatible()
-    within_price = computer.get_price() <= max_price
+    within_price = computer.total_price() <= max_price
     choice = np.random.random() <= 0.9
     low, high = 0, max_price
     if price_mode is 'Cheap' and choice:
         high = max_price / 2
     elif price_mode is 'Expensive' and choice:
         low = max_price / 2
-    meet_range = low <= computer.get_price() <= high
+    meet_range = low <= computer.total_price() <= high
     free = computer.total_shipping() == 0
     if compatible and within_price and meet_range:
         if free_shipping:

@@ -1,55 +1,56 @@
 Name:'BadAssComputer'
 CPU:
 	Brand:AMD
-	Detail:AMD Ryzen 9 3950X 16-Core 3.5 GHz Socket AM4 105W 100-100000051WOF Desktop Processor
-	Price:739.99
-	Link:https://www.newegg.com/amd-ryzen-9-3950x/p/N82E16819113616?Item=N82E16819113616
+	Detail:AMD RYZEN 5 3600X 6-Core 3.8 GHz (4.4 GHz Max Boost) Socket AM4 95W 100-100000022BOX Desktop Processor
+	Price:204.99
+	Link:https://www.newegg.com/amd-ryzen-5-3600x/p/N82E16819113568?Item=N82E16819113568
 	Shipping:0
 Motherboard:
-	Brand:MSI
-	Detail:MSI B450 TOMAHAWK MAX AM4 AMD B450 SATA 6Gb/s ATX AMD Motherboard
-	Price:114.99
-	Link:https://www.newegg.com/msi-b450-tomahawk-max/p/N82E16813144267?Item=N82E16813144267
+	Brand:ASRock
+	Detail:ASRock B450M PRO4 AM4 AMD Promontory B450 SATA 6Gb/s USB 3.1 HDMI Micro ATX AMD Motherboard
+	Price:79.99
+	Link:https://www.newegg.com/asrock-b450m-pro4/p/N82E16813157843?Item=N82E16813157843
 	Shipping:$3.99 Shipping
 Memory:
 	Brand:G.SKILL
-	Detail:G.SKILL Trident Z Neo (For AMD Ryzen) Series 32GB (2 x 16GB) 288-Pin RGB DDR4 SDRAM DDR4 3600 (PC4 28800) Desktop Memory Model F4-3600C16D-32GTZNC
-	Price:184.99
-	Link:https://www.newegg.com/g-skill-32gb-288-pin-ddr4-sdram/p/N82E16820232861?Item=N82E16820232861
+	Detail:G.SKILL Ripjaws V Series 16GB (2 x 8GB) 288-Pin DDR4 SDRAM DDR4 3600 (PC4 28800) Desktop Memory Model F4-3600C16D-16GVKC
+	Price:83.99
+	Link:https://www.newegg.com/g-skill-16gb-288-pin-ddr4-sdram/p/N82E16820232880?Item=N82E16820232880
 	Shipping:0
 Storage:
-	Brand:Western Digital
-	Detail:WD Red 4TB NAS Hard Disk Drive - 5400 RPM Class SATA 6Gb/s 64MB Cache 3.5 Inch - WD40EFRX
-	Price:118.99
-	Link:https://www.newegg.com/red-wd40efrx-4tb/p/N82E16822236599?Item=N82E16822236599
+	Brand:Seagate
+	Detail:Seagate IronWolf 6TB NAS Hard Drive 7200 RPM 256MB Cache SATA 6.0Gb/s 3.5" Internal Hard Drive ST6000VN0033
+	Price:159.99
+	Link:https://www.newegg.com/seagate-ironwolf-st6000vn0033-6tb/p/N82E16822172057?Item=N82E16822172057
 	Shipping:0
 Graphic:
 	Brand:ASRock
-	Detail:ASRock Radeon RX 5700 XT DirectX 12 RX 5700 XT TAICHI X 8G OC+ 8GB 256-Bit GDDR6 PCI Express 4.0 HDCP Ready Video Card
-	Price:439.99
-	Link:https://www.newegg.com/asrock-radeon-rx-5700-xt-rx-5700-xt-taichi-x-8g-oc/p/N82E16814930022?Item=N82E16814930022
-	Shipping:0
-OS:'NA'                
-Case:
-	Brand:Cooler Master
-	Detail:Cooler Master MasterCase H500 ARGB Airflow ATX Mid-Tower with Mesh & Transparent Front Panel Option, 2 x 200mm ARGB Fans, and a Tempered Glass Side Panel
+	Detail:ASRock Phantom Gaming D Radeon RX 570 DirectX 12 RX570 4G 4GB 256-Bit GDDR5 PCI Express 3.0 x16 HDCP Ready Video Card
 	Price:119.99
-	Link:https://www.newegg.com/gunmetal-cooler-master-mastercase-h500-atx-mid-tower/p/N82E16811119350?Item=N82E16811119350
-	Shipping:$11.99 Shipping
+	Link:https://www.newegg.com/asrock-radeon-rx-570-rx570-4g/p/N82E16814930010?Item=N82E16814930010
+	Shipping:$0.99 Shipping
+OS:'NA'
+Case:
+	Brand:Corsair
+	Detail:Carbide Series 88R CC-9011086-WW Micro ATX Mid-Tower Computer Case
+	Price:59.96
+	Link:https://www.newegg.com/black-corsair-carbide-series-88r-micro-atx-mini-itx/p/N82E16811139068?Item=N82E16811139068
+	Shipping:0
 Power:
-	Brand:EVGA
-	Detail:EVGA SuperNOVA 750 G5, 80 Plus Gold 750W, Fully Modular, Eco Mode with FDB Fan, 10 Year Warranty, Includes Power ON Self Tester, Compact 150mm Size, Power Supply 220-G5-0750-X1
-	Price:139.99
-	Link:https://www.newegg.com/evga-supernova-750-g5-220-g5-0750-x1-750w/p/N82E16817438162?Item=N82E16817438162
-	Shipping:$9.99 Shipping
+	Brand:Corsair
+	Detail:CORSAIR HX Series HX1200 CP-9020140-NA 1200W ATX12V v2.4 / EPS12V 2.92 80 PLUS PLATINUM Certified Full Modular Power Supply
+	Price:249.94
+	Link:https://www.newegg.com/corsair-hx-series-hx1200-cp-9020140-na-1200w/p/N82E16817139205?Item=N82E16817139205
+	Shipping:$5.99 Shipping                
 Cooling:
-	Brand:Fractal Design
-	Detail:Fractal Design Celsius S24 240mm Silent High Performance Slim Expandable All-In-One CPU Liquid / Water Cooler
-	Price:128.99
-	Link:https://www.newegg.com/p/N82E16835352029?Item=N82E16835352029
+	Brand:Corsair
+	Detail:Corsair LL Series CO-9050072-WW LL120 RGB, 120mm Dual Light Loop RGB LED PWM Fan, 3 Fan Pack with Lighting Node PRO
+	Price:129.99
+	Link:https://www.newegg.com/corsair-co-9050072-ww-case-fan/p/N82E16835181130?Item=N82E16835181130
 	Shipping:0
 monitor:'NA'
 mice:'NA'
-keyboard:'NA'                
-Price:$1987.92
-Shipping:$0.00
+keyboard:'NA'
+
+Total Price:$1088.84
+Total Shipping:$0.00
