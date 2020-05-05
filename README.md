@@ -5,8 +5,8 @@ The code can find esential parts from Newegg website and help to build a desktop
 # Prerequisites
 
 You must have installed in your machine (higher versions are fine):
-  Google Chrome v.80
-  Python 3.8
+  1. Google Chrome v.80
+  2. Python 3.8
   
 # Installing/ Executing
 
@@ -22,6 +22,6 @@ These steps will help you to get a copy of this project and running on your loca
 Tuo Lu & Alex Fan
 
 # References
-https://www.crummy.com/software/BeautifulSoup/bs4/doc/
-https://www.youtube.com/watch?v=XQgXKtPSzUI&list=PLE3E-koeiE6jk36yUvN6nho6j54ja3je4&index=4&t=1242s
+1. BeautifulSoup package: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+2. https://www.youtube.com/watch?v=XQgXKtPSzUI&list=PLE3E-koeiE6jk36yUvN6nho6j54ja3je4&index=4&t=1242s
 
