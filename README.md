@@ -13,8 +13,8 @@ You must have installed in your machine (higher versions are fine):
 These steps will help you to get a copy of this project and running on your local machine for development and testing purpose.
   1. Download the whole repository. 
   2. Place EN.540.635-Final_Project in your python environment
-  3. Open __int__.py, tune parameters "max_price, price_mode, and free_shipping" (line 215 - 217) based on your perference.
-  4. Run __int__.py
+  3. Open __init__.py, tune parameters "max_price, price_mode, and free_shipping" (line 215 - 217) based on your perference.
+  4. Run __init__.py
   5. Check the "BadAssComputer.txt" to see the result
   
 # Authors
