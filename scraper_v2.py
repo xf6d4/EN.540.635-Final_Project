@@ -16,6 +16,7 @@ def scraper(url):
     This function scrap product info from www.newegg.com
     and initiate theminto components of the computer
     with a give dict of urls
+
     **Parameter**
         url:*dict,str*
             A dict that contain info for component names and its url.
@@ -40,11 +41,11 @@ def scraper(url):
     '''
     component_type = list(url.keys())
     component_list = {t + '_list': [] for t in component_type}
+
     pos_component = [
         'cpu', 'motherboard', 'case', 'power_supply', 'memory', 'storage',
         'cooling', 'graphic', 'os', 'monitor', 'mice', 'keyboard', 'test'
     ]
-
     assert all(t in pos_component for t in component_type), \
         'KeyError: Please refer to readme for possible component names '\
         'and change the name in keys for url'

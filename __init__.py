@@ -22,7 +22,10 @@ def write_computer(computer):
         AssertionError:*str*
             error if input is not callable
     '''
-    assert callable(computer), 'The computer is not callable'
+    try:
+        computer.name
+    except AttributeError:
+        raise AttributeError('The computer is not callable')
     f = open(computer.name + '.txt', 'w')
     f.write(repr(computer))
     f.close()
