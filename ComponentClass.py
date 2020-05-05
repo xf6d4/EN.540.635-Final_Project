@@ -22,24 +22,12 @@ class Component(object):
         __repr__(self):
             return all info stored in the component
     '''
-    def __init__(self, type=None, brand=None, detail=None, price=None, 
+    def __init__(self, type=None, brand=None, detail=None, price=None,
                  link=None, shipping=None):
         '''
         initiate the component with its informations
 
         **Parameters**
-<<<<<<< HEAD
-            brand: *list*
-                brand names for every component
-            detail: *list*
-                detail information for every component
-            price: *list*
-                price for every component 
-            link: *list*
-                url links for every component
-            shipping: *list*
-                shipping information for every component
-=======
             brand:*str*
                 The brand of the component
             detail:*str*
@@ -56,7 +44,6 @@ class Component(object):
 
         **Error**
             None
->>>>>>> 0606b88fe1a36e32936666aaca42b02e6b122684
         '''
         if type is None:
             raise ValueError('type of the component can\'t be None')
@@ -94,6 +81,11 @@ class Component(object):
 
     def __repr__(self):
         '''
+        return all info of the component
+
+        **Output**
+            msg:*str*
+                all info of the component
         '''
         msg = "\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s\n\t%s:%s" \
             % (
