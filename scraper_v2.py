@@ -72,7 +72,7 @@ def scraper(url):
             stop = price.index('.') + 3
             price = price[:stop]
             try:
-                float(price)
+                price = float(price)
             except ValueError:
                 price = 'Unknown'
             # Scrap web link
@@ -83,11 +83,11 @@ def scraper(url):
                 shipping = 0
             elif isinstance(shipping, (float, int)):
                 pass
-            elif shipping is str:
-                stop = c.shipping.index(' ')
-                shipping = c.shipping[1:stop]
+            elif '.' in shipping:
+                stop = shipping.index('.') + 3
+                shipping = shipping[1:stop]
                 try:
-                    float(shipping)
+                    shipping = float(shipping)
                 except ValueError:
                     shipping = 'Unknown'
             c = Component(t, brand, detail, price, link, shipping)

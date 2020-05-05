@@ -1,56 +1,56 @@
 Name:'BadAssComputer'
 CPU:
 	Brand:AMD
-	Detail:AMD RYZEN 5 3600X 6-Core 3.8 GHz (4.4 GHz Max Boost) Socket AM4 95W 100-100000022BOX Desktop Processor
-	Price:204.99
-	Link:https://www.newegg.com/amd-ryzen-5-3600x/p/N82E16819113568?Item=N82E16819113568
+	Detail:AMD RYZEN 7 3800X 8-Core 3.9 GHz (4.5 GHz Max Boost) Socket AM4 105W 100-100000025BOX Desktop Processor
+	Price:339.99
+	Link:https://www.newegg.com/amd-ryzen-7-3800x/p/N82E16819113104?Item=N82E16819113104
 	Shipping:0
 Motherboard:
-	Brand:ASRock
-	Detail:ASRock B450M PRO4 AM4 AMD Promontory B450 SATA 6Gb/s USB 3.1 HDMI Micro ATX AMD Motherboard
-	Price:79.99
-	Link:https://www.newegg.com/asrock-b450m-pro4/p/N82E16813157843?Item=N82E16813157843
-	Shipping:$3.99 Shipping
+	Brand:ASUS
+	Detail:ASUS AMD AM4 ROG Strix X570-E Gaming ATX Motherboard with PCIe 4.0, WiFi 6, 2.5Gbps LAN, Dual M.2, SATA 6Gb/s, USB 3.2 Gen 2
+	Price:299.99
+	Link:https://www.newegg.com/asus-rog-strix-x570-e-gaming/p/N82E16813119111?Item=N82E16813119111
+	Shipping:0
 Memory:
-	Brand:G.SKILL
-	Detail:G.SKILL Ripjaws V Series 16GB (2 x 8GB) 288-Pin DDR4 SDRAM DDR4 3600 (PC4 28800) Desktop Memory Model F4-3600C16D-16GVKC
-	Price:83.99
-	Link:https://www.newegg.com/g-skill-16gb-288-pin-ddr4-sdram/p/N82E16820232880?Item=N82E16820232880
+	Brand:Corsair
+	Detail:CORSAIR Vengeance LPX 16GB (2 x 8GB) 288-Pin DDR4 SDRAM DDR4 3000 (PC4 24000) Memory Kit Model CMK16GX4M2B3000C15
+	Price:84.99
+	Link:https://www.newegg.com/corsair-16gb-288-pin-ddr4-sdram/p/N82E16820233852?Item=N82E16820233852
 	Shipping:0
 Storage:
 	Brand:Seagate
-	Detail:Seagate IronWolf 6TB NAS Hard Drive 7200 RPM 256MB Cache SATA 6.0Gb/s 3.5" Internal Hard Drive ST6000VN0033
-	Price:159.99
-	Link:https://www.newegg.com/seagate-ironwolf-st6000vn0033-6tb/p/N82E16822172057?Item=N82E16822172057
+	Detail:Seagate Expansion 8TB USB 3.0 3.5" Desktop External Hard Drive STEB8000100 Black
+	Price:131.99
+	Link:https://www.newegg.com/black-seagate-expansion-8tb/p/N82E16822178951?Item=N82E16822178951
 	Shipping:0
 Graphic:
-	Brand:ASRock
-	Detail:ASRock Phantom Gaming D Radeon RX 570 DirectX 12 RX570 4G 4GB 256-Bit GDDR5 PCI Express 3.0 x16 HDCP Ready Video Card
-	Price:119.99
-	Link:https://www.newegg.com/asrock-radeon-rx-570-rx570-4g/p/N82E16814930010?Item=N82E16814930010
-	Shipping:$0.99 Shipping
+	Brand:EVGA
+	Detail:EVGA GeForce RTX 2080 Ti XC HYBRID GAMING, 11G-P4-2384-KR, 11GB GDDR6, HYBRID, RGB LED Logo, Metal Backplate
+	Price:1399.99
+	Link:https://www.newegg.com/evga-geforce-rtx-2080-ti-11g-p4-2384-kr/p/N82E16814487432?Item=N82E16814487432
+	Shipping:0
 OS:'NA'
 Case:
-	Brand:Corsair
-	Detail:Carbide Series 88R CC-9011086-WW Micro ATX Mid-Tower Computer Case
-	Price:59.96
-	Link:https://www.newegg.com/black-corsair-carbide-series-88r-micro-atx-mini-itx/p/N82E16811139068?Item=N82E16811139068
-	Shipping:0
+	Brand:Cooler Master
+	Detail:Cooler Master MasterCase H100 Mini-ITX Case w/ 200mm RGB Fan, Mesh Front Panel, Built-In Handle & USB 3.2 Gen 1 (USB 3.0)
+	Price:69.99
+	Link:https://www.newegg.com/black-iron-grey-cooler-master-mastercase-h100-mini-itx/p/N82E16811119374?Item=N82E16811119374
+	Shipping:6.99
 Power:
-	Brand:Corsair
-	Detail:CORSAIR HX Series HX1200 CP-9020140-NA 1200W ATX12V v2.4 / EPS12V 2.92 80 PLUS PLATINUM Certified Full Modular Power Supply
-	Price:249.94
-	Link:https://www.newegg.com/corsair-hx-series-hx1200-cp-9020140-na-1200w/p/N82E16817139205?Item=N82E16817139205
-	Shipping:$5.99 Shipping                
+	Brand:Thermaltake
+	Detail:Thermaltake Toughpower GF1 850W 80+ Gold SLI/Crossfire Ready Ultra Quiet 140mm Hydraulic Bearing Smart Zero Fan Full Modular Power Supply 10 Year Warranty - PS-TPD-0850FNFAGU-1
+	Price:139.99
+	Link:https://www.newegg.com/thermaltake-toughpower-gf1-tt-premium-edition-ps-tpd-0850fnfaga-1-850w/p/N82E16817153403?Item=N82E16817153403
+	Shipping:0                
 Cooling:
-	Brand:Corsair
-	Detail:Corsair LL Series CO-9050072-WW LL120 RGB, 120mm Dual Light Loop RGB LED PWM Fan, 3 Fan Pack with Lighting Node PRO
-	Price:129.99
-	Link:https://www.newegg.com/corsair-co-9050072-ww-case-fan/p/N82E16835181130?Item=N82E16835181130
+	Brand:Cooler Master
+	Detail:Cooler Master MasterLiquid Lite ML120L RGB AIO CPU Liquid Cooler, Sleeved FEP Tubing, 120mm RGB Air Balance MF, RGB Software compatible, Dual Dissipation Technology
+	Price:64.99
+	Link:https://www.newegg.com/cooler-master-masterliquid-ml120l-rgb-liquid-cooling-system/p/2YM-0004-00014?Item=2YM-0004-00014
 	Shipping:0
 monitor:'NA'
 mice:'NA'
 keyboard:'NA'
 
-Total Price:$1088.84
-Total Shipping:$0.00
+Total Price:$2531.92
+Total Shipping:$6.99

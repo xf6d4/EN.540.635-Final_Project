@@ -95,9 +95,9 @@ def meet_requirement(computer, max_price, price_mode, free_shipping):
         computer.ifcomplete()
     except AttributeError:
         raise AttributeError('Please put in object initiated by ComputerClass')
+
     if not computer.ifcomplete():
         return False
-
     compatible = computer.ifcompatible()
     within_price = computer.total_price() <= max_price
 
@@ -155,8 +155,8 @@ def build_a_computer(
             error if url is not dict
         NameError:*str*
             error if name is not str
-        PriceError:*str*
-            error if max_price is not int or float
+        ValueError:*str*
+            error if max_price can not be converted into int or float
         PriceModeError:*str*
             error if price_mode doesn't match any of the pre set type
         ShippingError:*str*
@@ -165,15 +165,18 @@ def build_a_computer(
             error if 9999 times are tried and
             the computer that meet all requirements is not found
     '''
-    assert isinstance(url, dict), 'InputError: url must be a dict'
+    assert isinstance(url, dict), 'InputError, url must be a dict'
     assert isinstance(name, str), \
-        'NameError: name of the computer should be str'
-    assert isinstance(max_price, (float, int)), \
-        'PriceError: max_price should be numbers'
+        'NameError, name of the computer should be str'
+    try:
+        max_price = float(max_price)
+    except ValueError:
+        raise ValueError('max_price should be numbers')
     assert price_mode in ['Try', 'Cheap', 'Expensive'], \
-        'PriceModeError: Wrong price_mode'
+        'PriceModeError, Wrong price_mode'
     assert isinstance(free_shipping, bool), \
-        'ShiipingError: free_shipping should be bool'
+        'ShippingError, attribute free_shipping should be bool'
+
     component_list = scraper(url)
     computer = Computer(name)
     component_type = computer.component_type
@@ -187,7 +190,7 @@ def build_a_computer(
                 setattr(computer, t, 'NA')
         trytime += 1
         assert trytime <= 9999, \
-            'TryError: There is no combination that meets all requirement'
+            'TryError, There is no combination that meets all requirement'
     write_computer(computer)
 
 
@@ -216,6 +219,6 @@ if __name__ == '__main__':
         url,
         name='BadAssComputer',
         max_price=3000,
-        price_mode='Expensive',
+        price_mode='Try',
         free_shipping=False
     )

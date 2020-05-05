@@ -177,8 +177,8 @@ class Computer(object):
                 return error if cpu.brand or motherboard.detail is not callable
         '''
         try:
-            b = self.cpu.brand
-            d = self.motherboard.detail
+            self.cpu.brand
+            self.motherboard.detail
         except AttributeError:
             raise AttributeError('CPU or Motherboard should not be empty '
                                  'if compatible check is needed')
@@ -214,11 +214,9 @@ class Computer(object):
             c = self.__dict__[t]
             if type(c) != str:
                 try:
-                    float(c.price)
+                    total_price += float(c.price)
                 except ValueError:
                     pass
-                else:
-                    total_price += float(c.price)
         if total_price == 0:
             raise ValueError('Current price for the computer is 0')
         return total_price
@@ -238,9 +236,7 @@ class Computer(object):
             c = self.__dict__[t]
             if type(c) != str:
                 try:
-                    float(c.shipping)
+                    total_shipping += float(c.shipping)
                 except ValueError:
                     pass
-                else:
-                    total_shipping += float(c.shipping)
         return total_shipping
