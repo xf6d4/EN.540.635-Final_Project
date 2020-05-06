@@ -17,6 +17,10 @@ These steps will help you to get a copy of this project and running on your loca
   4. Run __init__.py
   5. Check the "BadAssComputer.txt" to see the result
   
+### Note
+* Input info 'url' can also be tune by input more components' name and product url found in www.newegg.com.
+* Possible component names include: cpu, motherboard, case, power_supply, memory, storage, cooling, graphic, os, monitor, mice, keyboard
+
 # Authors
 
 Tuo Lu & Alex Fan
