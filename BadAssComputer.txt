@@ -1,56 +1,56 @@
 Name:'BadAssComputer'
 CPU:
-	Brand:AMD
-	Detail:AMD RYZEN 7 3800X 8-Core 3.9 GHz (4.5 GHz Max Boost) Socket AM4 105W 100-100000025BOX Desktop Processor
-	Price:339.99
-	Link:https://www.newegg.com/amd-ryzen-7-3800x/p/N82E16819113104?Item=N82E16819113104
+	Brand:Intel
+	Detail:Intel Core i5-8400 Coffee Lake 6-Core 2.8 GHz (4.0 GHz Turbo) LGA 1151 (300 Series) 65W BX80684I58400 Desktop Processor Intel UHD Graphics 630
+	Price:179.99
+	Link:https://www.newegg.com/core-i5-8th-gen-intel-core-i5-8400/p/N82E16819117824?Item=N82E16819117824
 	Shipping:0
 Motherboard:
-	Brand:ASUS
-	Detail:ASUS AMD AM4 ROG Strix X570-E Gaming ATX Motherboard with PCIe 4.0, WiFi 6, 2.5Gbps LAN, Dual M.2, SATA 6Gb/s, USB 3.2 Gen 2
-	Price:299.99
-	Link:https://www.newegg.com/asus-rog-strix-x570-e-gaming/p/N82E16813119111?Item=N82E16813119111
+	Brand:ASRock
+	Detail:ASRock Z490 AQUA LGA 1200 Intel Z490 SATA 6Gb/s Extended ATX Intel Motherboard
+	Price:1099.99
+	Link:https://www.newegg.com/p/N82E16813157926?Item=N82E16813157926
 	Shipping:0
 Memory:
-	Brand:Corsair
-	Detail:CORSAIR Vengeance LPX 16GB (2 x 8GB) 288-Pin DDR4 SDRAM DDR4 3000 (PC4 24000) Memory Kit Model CMK16GX4M2B3000C15
-	Price:84.99
-	Link:https://www.newegg.com/corsair-16gb-288-pin-ddr4-sdram/p/N82E16820233852?Item=N82E16820233852
+	Brand:Crucial
+	Detail:Crucial Ballistix 32GB (2 x 16GB) 260-Pin DDR4 SO-DIMM DDR4 3200 (PC4 25600) Laptop Memory Model BL2K16G32C16S4B
+	Price:159.99
+	Link:https://www.newegg.com/ballistix-32gb-260-pin-ddr4-so-dimm/p/N82E16820164169?Item=N82E16820164169
 	Shipping:0
 Storage:
-	Brand:Seagate
-	Detail:Seagate Expansion 8TB USB 3.0 3.5" Desktop External Hard Drive STEB8000100 Black
-	Price:131.99
-	Link:https://www.newegg.com/black-seagate-expansion-8tb/p/N82E16822178951?Item=N82E16822178951
+	Brand:Western Digital
+	Detail:WD Red 4TB NAS Hard Disk Drive - 5400 RPM Class SATA 6Gb/s 64MB Cache 3.5 Inch - WD40EFRX
+	Price:109.99
+	Link:https://www.newegg.com/red-wd40efrx-4tb/p/N82E16822236599?Item=N82E16822236599
 	Shipping:0
 Graphic:
-	Brand:EVGA
-	Detail:EVGA GeForce RTX 2080 Ti XC HYBRID GAMING, 11G-P4-2384-KR, 11GB GDDR6, HYBRID, RGB LED Logo, Metal Backplate
-	Price:1399.99
-	Link:https://www.newegg.com/evga-geforce-rtx-2080-ti-11g-p4-2384-kr/p/N82E16814487432?Item=N82E16814487432
-	Shipping:0
+	Brand:MSI
+	Detail:MSI Radeon RX 5700 DirectX 12 RX 5700 MECH OC 8GB 256-Bit GDDR6 PCI Express 4.0 HDCP Ready CrossFireX Support Video Card
+	Price:329.99
+	Link:https://www.newegg.com/msi-radeon-rx-5700-rx-5700-mech-oc/p/N82E16814137466?Item=N82E16814137466
+	Shipping:1.99
 OS:'NA'
 Case:
-	Brand:Cooler Master
-	Detail:Cooler Master MasterCase H100 Mini-ITX Case w/ 200mm RGB Fan, Mesh Front Panel, Built-In Handle & USB 3.2 Gen 1 (USB 3.0)
+	Brand:EVGA
+	Detail:EVGA DG-75 Alpine White Mid-Tower, 2 Sides of Tempered Glass, Gaming Case 156-F1-2022-KR
 	Price:69.99
-	Link:https://www.newegg.com/black-iron-grey-cooler-master-mastercase-h100-mini-itx/p/N82E16811119374?Item=N82E16811119374
-	Shipping:6.99
+	Link:https://www.newegg.com/alpine-white-evga-dg-75-atx-mid-tower/p/N82E16811205029?Item=N82E16811205029
+	Shipping:0
 Power:
-	Brand:Thermaltake
-	Detail:Thermaltake Toughpower GF1 850W 80+ Gold SLI/Crossfire Ready Ultra Quiet 140mm Hydraulic Bearing Smart Zero Fan Full Modular Power Supply 10 Year Warranty - PS-TPD-0850FNFAGU-1
-	Price:139.99
-	Link:https://www.newegg.com/thermaltake-toughpower-gf1-tt-premium-edition-ps-tpd-0850fnfaga-1-850w/p/N82E16817153403?Item=N82E16817153403
-	Shipping:0                
+	Brand:SeaSonic USA
+	Detail:Seasonic Flagship PRIME 600 Titanium Fanless SSR-600TL 600W 80+ Titanium Full Modular ATX12V & EPS12V 12 Years Warranty Super Quiet Power Supply
+	Price:219.99
+	Link:https://www.newegg.com/seasonic-prime-series-ssr-600tl-600w/p/N82E16817151194?Item=N82E16817151194
+	Shipping:7.99                
 Cooling:
 	Brand:Cooler Master
-	Detail:Cooler Master MasterLiquid Lite ML120L RGB AIO CPU Liquid Cooler, Sleeved FEP Tubing, 120mm RGB Air Balance MF, RGB Software compatible, Dual Dissipation Technology
-	Price:64.99
-	Link:https://www.newegg.com/cooler-master-masterliquid-ml120l-rgb-liquid-cooling-system/p/2YM-0004-00014?Item=2YM-0004-00014
+	Detail:Cooler Master MasterLiquid Lite ML240L RGB AIO CPU Liquid Cooler, Sleeved FEP Tubing, Dual 120mm RGB Air Balance MF, RGB Software compatible, Dual Dissipation Technology
+	Price:79.99
+	Link:https://www.newegg.com/cooler-master-masterliquid-ml240l-rgb-liquid-cooling-system/p/2YM-0004-00015?Item=2YM-0004-00015
 	Shipping:0
 monitor:'NA'
 mice:'NA'
 keyboard:'NA'
 
-Total Price:$2531.92
-Total Shipping:$6.99
+Total Price:$2249.92
+Total Shipping:$9.98

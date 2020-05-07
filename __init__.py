@@ -29,6 +29,7 @@ def write_computer(computer):
     f = open(computer.name + '.txt', 'w')
     f.write(repr(computer))
     f.close()
+    print('Saved %s under the same folder' % (computer.name + '.txt'))
 
 
 def scraper_test():
